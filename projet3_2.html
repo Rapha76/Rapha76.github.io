@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet 3ème année 2</title>
+    <style>
+      body {
+          text-align: center; /* Centrer le texte horizontalement */
+          margin: 0; /*Supprimer la marge par défaut du corps */
+          padding: 30px; /*Supprimer le rembourrage par défaut du corps
+          height: 100vh; /* Utiliser 100% de la hauteur de la vue */
+           display: flex; /* Utiliser la disposition flexible */
+          justify-content: center; /* Centrer le contenu horizontalement */
+          box-sizing: border-box;
+          /* align-items: center; Centrer le contenu verticalement */
+      }
+
+      p {
+            max-width: 1200px; /* Définir une largeur maximale pour le texte */
+            margin: 0 auto; /* Centrer le texte horizontalement */
+        }
+  </style>
+    <link rel="stylesheet" href="Libraries/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Css/projet20.css" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <!-- <a href="#" class="nav-logo">Raphaël Bandeira</a> -->
+
+        <!-- <div class="nav-menu" id="nav-menu"> -->
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link"
+                ><i class="fa-solid fa-house nav-icon"></i> Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="index.html#portfolio" class="nav-link"
+                ><i class="fa-solid fa-image nav-icon"></i> Projets</a
+              >
+            </li>
+            <li class="nav-item">
+                <a href="projet3.html" class="nav-link"
+                  ><i class="fa-solid fa-image nav-icon"></i> Projets 3ème année</a
+                >
+              </li>
+          </ul>
+          <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-btns">
+          <!-- theme btn  -->
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div>
+          <h1>Migration de données vers ou depuis un environnement NoSQL</h1><br>
+            <h2>
+              Présentation du projet
+            </h2>
+            <p>
+              L'objectif de cette SAE était de concevoir un gestionnaire de tâches exploitant Redis comme système de stockage de données. Les fonctionnalités principales que nous devions intégrer au gestionnaire de tâches comprenaient l'ajout, la suppression, la modification et l'affichage des tâches. Chaque tâche était caractérisée par un nom, une description, un statut parmi les options « en attente », « en cours » et « terminée », ainsi qu'une date d'échéance. Notre travail s'est déroulé en utilisant le langage de programmation Python et la librairie Tkinter pour l’interface graphique.
+          </p><br>
+          <h2>
+            Organisation du travail - Démarche de solution
+          </h2>
+          <p>
+            Nous formions une équipe de trois personnes pour mener à bien cette tâche. Le travail s'est déroulé en deux étapes distinctes : d'abord, la création des fonctions du gestionnaire de tâches destinées à être utilisées dans l'IDE, puis la conception de l'interface utilisateur. Pour amorcer le processus, nous nous sommes connectés à la base de données Redis dédiée à notre groupe. Afin d'optimiser notre efficacité, nous avons réparti les responsabilités lors de la création des fonctions. Étant donné que nous avions déjà réalisé des exercices similaires en classe, le processus s'est avéré assez rapide.
+          </p><br>
+          <br>
+          <p>La seconde phase était dédiée à la conception de l'interface graphique et à l'intégration des fonctions précédemment créées. Nous avons accompli cette étape de manière collaborative. Étant donné que la création d'une interface était une nouveauté pour nous, nous avons entrepris des recherches approfondies en ligne pour comprendre son processus de développement. Cette démarche nous a grandement aidés à appréhender les diverses fonctions incluses dans le package Tkinter, nous permettant ainsi de concevoir l'interface tout en intégrant les fonctionnalités nécessaires.</p><br>
+            <figure>
+              <img src="Assets/Icons/redis.png" alt="Capture de l'interface utilisateur">
+              <figcaption>Capture de l'interface utilisateur</figcaption>
+            </figure>
+            <br>
+          <h2>
+            Apports du projets et objectifs
+          </h2>
+          <p>Au cours de cette SAE, j'ai acquis la compétence de concevoir une interface graphique à l'aide de la bibliothèque Tkinter, tout en apprenant à lui intégrer des fonctionnalités. J'ai réalisé qu'il était envisageable d'améliorer l'esthétique de l'interface, bien que malheureusement nous n'ayons pas réussi à le faire durant ce projet. Pour atteindre cet objectif, il serait judicieux que j’approfondisse mes connaissances afin de parvenir à cette amélioration esthétique à l'avenir.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- <a href="#home" class="scrollup" id="scroll-up">
+      <i class="fa-solid fa-arrow-up scroll-up-icon"></i>
+    </a> -->
+    <script src="Libraries/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b634c15bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

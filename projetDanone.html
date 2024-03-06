@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet Danone</title>
+    <style>
+      body {
+          text-align: center; /* Centrer le texte horizontalement */
+          margin: 0; /*Supprimer la marge par défaut du corps */
+          padding: 30px; /*Supprimer le rembourrage par défaut du corps
+          height: 100vh; /* Utiliser 100% de la hauteur de la vue */
+           display: flex; /* Utiliser la disposition flexible */
+          justify-content: center; /* Centrer le contenu horizontalement */
+          box-sizing: border-box;
+          /* align-items: center; Centrer le contenu verticalement */
+      }
+
+      p {
+            max-width: 1200px; /* Définir une largeur maximale pour le texte */
+            margin: 0 auto; /* Centrer le texte horizontalement */
+        }
+  </style>
+    <link rel="stylesheet" href="Libraries/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Css/projet20.css" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <!-- <a href="#" class="nav-logo">Raphaël Bandeira</a> -->
+
+        <!-- <div class="nav-menu" id="nav-menu"> -->
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link"
+                ><i class="fa-solid fa-house nav-icon"></i> Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="index.html#portfolio" class="nav-link"
+                ><i class="fa-solid fa-image nav-icon"></i> Projets</a
+              >
+            </li>
+            <li class="nav-item">
+                <a href="projet_stage_alternance.html" class="nav-link"
+                  ><i class="fa-solid fa-image nav-icon"></i> Stage et alternance</a
+                >
+              </li>
+          </ul>
+          <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-btns">
+          <!-- theme btn  -->
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div>
+          <h1>Optimisation de la sélection des souches pour la création d'un ferment</h1><br>
+            <h2>
+              Présentation du projet
+            </h2>
+            <p>
+              Danone vise à réduire le sucre ajouté dans ses yaourts tout en préservant leurs caractéristiques. Des recherches sont menées pour trouver des solutions, comme l'utilisation de bactéries lactiques moins post-acidifiantes, afin de maintenir l'équilibre entre sucre et acidité. Cette étude vise à collecter des données en vue de les analyser et de construire une base de données facilitant la prise de décision pour choisir les souches les plus adaptées à la création d'un nouveau ferment.
+            </p><br>
+            <h2>
+              Organisation du travail - Démarche de solution
+            </h2>
+            <p>
+              Le processus de création de nouveaux ferments est long et complexe, nécessitant des efforts empiriques pour modéliser les interactions entre les souches. Il est donc possible d’optimiser ce processus en exploitant les données.
+              <br>
+              <br>
+              1ère étape : Collecte des données. Les données sur les souches sont rassemblées à partir de divers fichiers Excel non standardisés. Des efforts sont déployés pour normaliser et consolider ces données, notamment en utilisant Python pour leur manipulation.
+              <br>
+              <br>
+              2ème étape : Nettoyage des données. Des analyses statistiques sont effectuées pour évaluer la qualité des données, identifier les valeurs aberrantes et standardiser les formats. Les données sont nettoyées et harmonisées pour faciliter leur comparaison et leur analyse ultérieure.
+              <br>
+              <br>
+              3ème étape : Création d'une Template. Une Template est développée pour standardiser la structure des données sur les souches et les ferments, simplifiant ainsi la collecte et l'analyse des données pour les futurs essais.
+              <br>
+              <br>
+              4ème étape : Analyse des données. Des visualisations, telles que des nuages de corrélation, sont utilisées pour explorer les relations entre les variables des différentes bases de données.
+              <br>
+              <br>
+              5ème étape : Conception d'un tableau de bord. Un tableau de bord est créé pour visualiser les données de manière claire et faciliter la prise de décision.
+              <br>
+              <br>
+            </p><br>
+          <h2>
+            Conclusion
+          </h2>
+          <p>Le projet a surmonté divers défis liés à la gestion et à l'analyse des données, grâce à l'utilisation de Python et à l'adoption d'une approche systématique. La création d'une Template standardisée représente une avancée importante pour les futurs projets. Les prochaines étapes incluront l'utilisation de modélisations telles que l'ACP et des techniques d'optimisation pour affiner les résultats.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- <a href="#home" class="scrollup" id="scroll-up">
+      <i class="fa-solid fa-arrow-up scroll-up-icon"></i>
+    </a> -->
+    <script src="Libraries/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b634c15bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

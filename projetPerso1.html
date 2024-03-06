@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet Perso1</title>
+    <style>
+      body {
+          text-align: center; /* Centrer le texte horizontalement */
+          margin: 0; /*Supprimer la marge par défaut du corps */
+          padding: 30px; /*Supprimer le rembourrage par défaut du corps
+          height: 100vh; /* Utiliser 100% de la hauteur de la vue */
+           display: flex; /* Utiliser la disposition flexible */
+          justify-content: center; /* Centrer le contenu horizontalement */
+          box-sizing: border-box;
+          /* align-items: center; Centrer le contenu verticalement */
+      }
+
+      p {
+            max-width: 1200px; /* Définir une largeur maximale pour le texte */
+            margin: 0 auto; /* Centrer le texte horizontalement */
+        }
+  </style>
+    <link rel="stylesheet" href="Libraries/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Css/projet20.css" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <!-- <a href="#" class="nav-logo">Raphaël Bandeira</a> -->
+
+        <!-- <div class="nav-menu" id="nav-menu"> -->
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link"
+                ><i class="fa-solid fa-house nav-icon"></i> Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="index.html#portfolio" class="nav-link"
+                ><i class="fa-solid fa-image nav-icon"></i> Projets</a
+              >
+            </li>
+            <li class="nav-item">
+                <a href="projetPerso.html" class="nav-link"
+                  ><i class="fa-solid fa-image nav-icon"></i> Projets Personnels</a
+                >
+              </li>
+          </ul>
+          <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-btns">
+          <!-- theme btn  -->
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div>
+          <h1>Modélisation pour l'Amélioration de la Qualité Viticole</h1><br>
+            <h2>
+              Présentation du projet
+            </h2>
+          <p>
+            La production viticole représente une source de revenus considérable, générant chaque année plusieurs milliards d'euros de chiffre d'affaires pour les pays producteurs. En tant que producteur, la qualité certifiée de votre vin est cruciale pour éviter les pertes financières. Cette qualité est évaluée à la fois par des tests physico-chimiques et sensoriels, ces derniers étant sujets à une approche subjective car ils impliquent l'analyse par des dégustateurs. Afin d'assister les producteurs dans l'amélioration de la qualité de leur vin, nous entreprenons la construction d'un modèle prédictif. Ce modèle se basera sur les paramètres physico-chimiques, offrant ainsi aux producteurs la possibilité d'ajuster ces derniers à leur convenance pour produire un vin de qualité optimale. L'objectif ultime est de fournir un modèle qui identifie les variables clés sur lesquelles les producteurs peuvent agir pour améliorer la qualité de leur vin.
+          </p><br>
+          <h2>
+            Organisation du travail - Démarche de solution
+          </h2>
+          <p>
+            Ce projet a été découvert en ligne, et j'ai donc entrepris de le réaliser entièrement par moi-même. À la fin du projet, j'ai comparé mes résultats avec d'autres pour évaluer ma performance. Deux fichiers CSV étaient disponibles pour ce projet : l'un contenait des données sur le vin rouge et l'autre sur le vin blanc. Ces ensembles de données partageaient les mêmes colonnes, comprenant des informations sur les paramètres physico-chimiques tels que le pH, la teneur en alcool, l'acidité volatile, etc., ainsi que la qualité du vin, qui constituait la variable cible.
+            <br>
+            <br>
+            1ère étape : Collecte et traitement des données. J'ai importé les deux fichiers CSV à l'aide de la bibliothèque Pandas, ce qui m'a permis d'accéder aux données sous forme de DataFrame. Ensuite, j'ai fusionné ces deux DataFrames en ajoutant une colonne pour distinguer la catégorie de vin (rouge ou blanc). Cette fusion nous permet de manipuler l'ensemble des données regroupées de manière cohérente.
+            <br>
+            <br>
+            2ème étape : Analyse exploratoire. L'analyse exploratoire des données est une étape essentielle dans tout projet de modélisation prédictive. Elle vise à comprendre la structure et les caractéristiques des données avant de commencer à construire des modèles. Pour ce faire, j'ai effectué des calculs statistiques tels que la moyenne, l'écart type, le minimum, le maximum, etc., pour chaque variable afin de comprendre leur distribution.
+            <br>
+            De plus, j'ai utilisé des visualisations telles que des histogrammes, des nuages de dispersion et des matrices de corrélation pour avoir une vue d'ensemble des données. Ces visualisations m'ont permis de visualiser les relations entre les variables et de détecter d'éventuelles tendances ou schémas.
+            <br>
+            <br>
+            3ème étape : Prétraitement des données. J’ai commencé par séparer mes données en deux L’échantillonnage des données est une étape cruciale dans la création d’un modèle d’apprentissage automatique. J’ai procédé à la division de mon ensemble de données en deux échantillons distincts : un pour l’entraînement et un pour le test. Cette division permettra de construire le modèle sur l’ensemble d’entraînement et d’évaluer sa qualité à l’aide de l’échantillon de test. J’ai choisi de répartir les données avec une proportion de 70% pour l’entraînement et de 30% pour le test.
+            <br>
+            Étant donné que les données présentaient des échelles différentes, j'ai procédé à la normalisation pour éviter que le modèle ne privilégie les variables à plus grande échelle, ce qui pourrait biaiser les résultats.
+            <br>
+            <br>
+            4ème étape : Construction du modèle. Pour ce projet, j'ai opté pour l'utilisation d'un modèle de forêts aléatoires. En appliquant ce modèle à mes données, j'ai calculé une erreur quadratique moyenne de 0.63, dans une plage de valeurs de 0 à 10, ce qui indique une certaine importance.
+            <br>
+            Dans le but de déterminer les attributs cruciaux pour la production d'un vin de qualité et d'aider les producteurs à optimiser leurs processus, j'ai procédé à une classification des variables en fonction de leurs "importances de caractéristiques". Cette démarche nous a permis d'évaluer l'impact de chaque variable. En effectuant cette analyse, j'ai constaté que le taux d'alcool était la variable ayant le plus grand impact sur la qualité du vin.
+            <br>
+            <br>
+          </p><br>
+          <h2>
+            Conclusion
+          </h2>
+          <p>En réalisant ce projet, j'ai pu approfondir mes compétences en apprentissage automatique, tout en renforçant ma compréhension du domaine de la science des données. En effet, la science des données commence toujours par la compréhension des enjeux métier, afin de bien cerner le problème à résoudre et les résultats attendus. Les conclusions de mon analyse révèlent que le taux d'alcool est la variable la plus significative pour la qualité du vin, suivie de près par l'acidité volatile. À la fin de ce projet, j'ai comparé les méthodes et résultats avec d'autres analyses trouvées en ligne, ce qui m'a permis de comprendre que le choix du type de modèle nécessite une évaluation minutieuse et une certaine expérimentation pour déterminer le modèle le plus adapté à chaque cas.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- <a href="#home" class="scrollup" id="scroll-up">
+      <i class="fa-solid fa-arrow-up scroll-up-icon"></i>
+    </a> -->
+    <script src="Libraries/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b634c15bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

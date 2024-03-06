@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet Atmo Normandie</title>
+    <style>
+      body {
+          text-align: center; /* Centrer le texte horizontalement */
+          margin: 0; /*Supprimer la marge par défaut du corps */
+          padding: 30px; /*Supprimer le rembourrage par défaut du corps
+          height: 100vh; /* Utiliser 100% de la hauteur de la vue */
+           display: flex; /* Utiliser la disposition flexible */
+          justify-content: center; /* Centrer le contenu horizontalement */
+          box-sizing: border-box;
+          /* align-items: center; Centrer le contenu verticalement */
+      }
+
+      p {
+            max-width: 1200px; /* Définir une largeur maximale pour le texte */
+            margin: 0 auto; /* Centrer le texte horizontalement */
+        }
+  </style>
+    <link rel="stylesheet" href="Libraries/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Css/projet20.css" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <!-- <a href="#" class="nav-logo">Raphaël Bandeira</a> -->
+
+        <!-- <div class="nav-menu" id="nav-menu"> -->
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link"
+                ><i class="fa-solid fa-house nav-icon"></i> Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="index.html#portfolio" class="nav-link"
+                ><i class="fa-solid fa-image nav-icon"></i> Projets</a
+              >
+            </li>
+            <li class="nav-item">
+                <a href="projet_stage_alternance.html" class="nav-link"
+                  ><i class="fa-solid fa-image nav-icon"></i> Stage et alternance</a
+                >
+              </li>
+          </ul>
+          <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-btns">
+          <!-- theme btn  -->
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div>
+          <h1>Construction d'outils pour formater les données d'entrée pour la modélisation de la qualité de l'air</h1><br>
+            <h2>
+              Présentation du projet
+            </h2>
+            <p>
+              Atmo Normandie gère un réseau de surveillance de la qualité de l'air avec cinquante stations. Ces stations fournissent des données horaires sur divers polluants atmosphériques. Ces données alimentent la modélisation, simulant la concentration des polluants à des endroits précis en utilisant des paramètres comme les conditions météorologiques et les émissions de polluants. La modélisation permet de créer des cartes de qualité de l'air, offrant ainsi une vision détaillée de la pollution sur le territoire. Les outils de modélisation sont adaptés à différentes échelles territoriales pour une analyse précise de la pollution atmosphérique.
+          </p><br>
+          <h2>
+            Organisation du travail - Démarche de solution
+          </h2>
+          <p>
+            Les données d'entrée sont au format NetCDF, un format de fichier conçu pour soutenir la création, l'accès et le partage de données scientifiques, largement utilisé dans les communautés océaniques et atmosphériques pour stocker des variables telles que la température, la pression, la pollution et la vitesse du vent.
+          </p><br>
+          <br>
+          <p>Ces données sont extraites de différentes bases de données et de fichiers NetCDF. L'objectif est de créer des fichiers NetCDF horaires sur l'année définie à partir des données extraites des fichiers.</p><br>
+          <p>Un programme automatisé a été développé pour gérer l'ensemble du processus, de la collecte des données à la transformation et à la création des fichiers. Ce programme est flexible, prenant en charge des arguments à partir d'un fichier texte, ce qui permet de l'adapter aux besoins spécifiques sans nécessiter de modifications directes.</p><br>
+          <p>De plus, une application R Shiny a été développée pour visualiser la pollution atmosphérique sur le territoire à partir des fichiers créés. Cette application permet à l'utilisateur de choisir la période et le polluant à visualiser, offrant ainsi une interface conviviale pour explorer les données.</p><br>
+          <h2>
+            Conclusion
+          </h2>
+          <p>Ce projet a relevé plusieurs défis relatifs à la collecte de données provenant de diverses sources, grâce à l'utilisation du langage R. La modélisation sur les données de pollution atmosphérique se révèle être un outil indispensable. En plus d'offrir une compréhension approfondie des mécanismes de la pollution et de faciliter la prédiction des niveaux futurs de pollution, cette approche présente plusieurs avantages concrets. Elle permet notamment d'optimiser les processus industriels en identifiant les sources de pollution et en proposant des solutions pour réduire les émissions polluantes. Cela peut engendrer des économies de coûts significatives et assurer une meilleure conformité réglementaire.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- <a href="#home" class="scrollup" id="scroll-up">
+      <i class="fa-solid fa-arrow-up scroll-up-icon"></i>
+    </a> -->
+    <script src="Libraries/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b634c15bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

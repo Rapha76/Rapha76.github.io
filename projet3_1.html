@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet 3ème année 1</title>
+    <style>
+      body {
+          text-align: center; /* Centrer le texte horizontalement */
+          margin: 0; /*Supprimer la marge par défaut du corps */
+          padding: 30px; /*Supprimer le rembourrage par défaut du corps
+          height: 100vh; /* Utiliser 100% de la hauteur de la vue */
+           display: flex; /* Utiliser la disposition flexible */
+          justify-content: center; /* Centrer le contenu horizontalement */
+          box-sizing: border-box;
+          /* align-items: center; Centrer le contenu verticalement */
+      }
+
+      p {
+            max-width: 1200px; /* Définir une largeur maximale pour le texte */
+            margin: 0 auto; /* Centrer le texte horizontalement */
+        }
+  </style>
+    <link rel="stylesheet" href="Libraries/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Css/projet20.css" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <!-- <a href="#" class="nav-logo">Raphaël Bandeira</a> -->
+
+        <!-- <div class="nav-menu" id="nav-menu"> -->
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link"
+                ><i class="fa-solid fa-house nav-icon"></i> Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="index.html#portfolio" class="nav-link"
+                ><i class="fa-solid fa-image nav-icon"></i> Projets</a
+              >
+            </li>
+            <li class="nav-item">
+                <a href="projet3.html" class="nav-link"
+                  ><i class="fa-solid fa-image nav-icon"></i> Projets 3ème année</a
+                >
+              </li>
+          </ul>
+          <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-btns">
+          <!-- theme btn  -->
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div>
+          <h1>Analyse et conception d'un outil décisionnel</h1><br>
+            <h2>
+              Présentation du projet
+            </h2>
+          <p>
+            Le but de ce projet consistait à élaborer un outil décisionnel destiné aux professionnels de l’industrie cinématographique, aux chercheurs et aux passionnés de cinéma. Cet outil permettrait d'explorer de manière efficace et intuitive les données cinématographiques, facilitant ainsi la prise de décisions éclairées, la détection de tendances et l'amélioration de l'expérience cinématographique à l'échelle mondiale pour les amateurs de cinéma. Le travail a été réalisé en 4 étapes : Analyse des données et conception des diagrammes, création du modèle avec SQLAlchemy, insertion des données dans la base de données et le développement de l’interface utilisateur. Nous avions à notre disposition deux fichiers csv.
+          </p><br>
+          <h2>
+            Organisation du travail - Démarche de solution
+          </h2>
+          <p>
+            Compte tenu du délai serré pour achever ce projet, nous avons collaboré en équipe et réparti les tâches entre les membres afin d'optimiser notre efficacité.
+            <br>
+            <br>
+            1ère étape : Analyse des données et conception des diagrammes. Avant d'entamer le processus de développement de l'application, nous avons débuté par l'analyse approfondie de nos ensembles de données. Cette étape visait à explorer la structure des fichiers CSV afin de comprendre la nature des informations qu'ils renferment. Cette analyse préliminaire a été cruciale pour concevoir deux modèles essentiels : le MCD (Modèle Conceptuel de Données) et le MLD (Modèle Logique de Données), lesquels ont permis de définir la structure de la base de données.
+            <br>
+            <br>
+            2ème étape : Création du modèle avec SQLAlchemy. En exploitant SQLAlchemy, une bibliothèque Python puissante dédiée à la gestion des bases de données, nous avons mis en place un modèle de données solide, en parfaite adéquation avec le Modèle Logique de Données.
+            <br>
+            <br>
+            3ème étape : Insertion des données. Nous avons utilisé Python pour ouvrir et stocker les données des fichiers CSV sous forme de dictionnaire. Cette approche nous a facilité l'intégration des données dans les différentes tables de notre base de données.
+            <br>
+            <br>
+            4ème étape : Développement de l’interface utilisateur. Pour la conception de notre application web interactive, nous avons utilisé Flask, intégrant divers langages de développement tels que HTML, CSS, JavaScript et D3.js. L'application propose plusieurs pages, chacune présentant des visualisations graphiques. La première page se concentre sur les genres, affichant le nombre de films par genre. La seconde est dédiée aux films, montrant le nombre de sorties cinématographiques au cours des 40 dernières années. Un bouton permet à l'utilisateur de basculer entre différentes perspectives visuelles. Chaque page comprend un formulaire de recherche pour trouver des films par année ou par genre. Les résultats de la recherche sont présentés dans une troisième page, fournissant une liste détaillée des films issus des requêtes.
+            <br>
+            <br>
+          </p><br>
+          <h2>
+            Apports du projets et objectifs
+          </h2>
+          <p>La réalisation de ce projet m'a permis d'acquérir des compétences techniques, notamment l'utilisation de Flask pour le développement web et la maîtrise des opérations de gestion de bases de données avec SQLAlchemy. Afin de progresser, il serait bénéfique que j'approfondisse mes connaissances dans la mise en place de tests automatisés, assurant ainsi la fiabilité et la stabilité de l'application.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- <a href="#home" class="scrollup" id="scroll-up">
+      <i class="fa-solid fa-arrow-up scroll-up-icon"></i>
+    </a> -->
+    <script src="Libraries/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b634c15bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

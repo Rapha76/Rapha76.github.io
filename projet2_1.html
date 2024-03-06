@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet 2ème année 1</title>
+    <style>
+      body {
+          text-align: center; /* Centrer le texte horizontalement */
+          margin: 0; /*Supprimer la marge par défaut du corps */
+          padding: 30px; /*Supprimer le rembourrage par défaut du corps
+          height: 100vh; /* Utiliser 100% de la hauteur de la vue */
+           display: flex; /* Utiliser la disposition flexible */
+          justify-content: center; /* Centrer le contenu horizontalement */
+          box-sizing: border-box;
+          /* align-items: center; Centrer le contenu verticalement */
+      }
+
+      p {
+            max-width: 1200px; /* Définir une largeur maximale pour le texte */
+            margin: 0 auto; /* Centrer le texte horizontalement */
+        }
+  </style>
+    <link rel="stylesheet" href="Libraries/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Css/projet20.css" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <!-- <a href="#" class="nav-logo">Raphaël Bandeira</a> -->
+
+        <!-- <div class="nav-menu" id="nav-menu"> -->
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link"
+                ><i class="fa-solid fa-house nav-icon"></i> Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="index.html#portfolio" class="nav-link"
+                ><i class="fa-solid fa-image nav-icon"></i> Projets</a
+              >
+            </li>
+            <li class="nav-item">
+                <a href="projet2.html" class="nav-link"
+                  ><i class="fa-solid fa-image nav-icon"></i> Projets 2ème année</a
+                >
+              </li>
+          </ul>
+          <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-btns">
+          <!-- theme btn  -->
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div>
+          <h1>Intégration de données dans un datawarehouse</h1><br>
+            <h2>
+              Présentation du projet
+            </h2>
+          <p>
+            Le but de ce projet était de créer une base de données relationnelles et faire des analyses sur des données. En l’occurrence ici, il s’agissait d’analyser les données relatives à la pollution et à la météo à Sheffield au Royaume Uni de 2000 à 2022. Nous avons eu pour cela à collecter les données depuis un site web (https://www.airviro.com/), les nettoyer et les préparer à l’utilisation (processus ETL à l’aide du langage python), créer une base de données primaire puis un entrepôt de données orienté vers l’analyse de données, produire les requêtes principales permettant d’analyser les données et enfin réaliser un reporting. Les données concernant la météo nous ont été fournies par le professeur (7 fichiers) tandis que celles concernant la pollution (29 fichiers), nous les avons collectées nous-même. Il s’agissait de fichiers au format csv.
+          </p><br>
+          <h2>
+            Organisation du travail - Démarche de solution
+          </h2>
+          <p>
+            Nous étions trois à réaliser ce travail. A chacune des étapes, nous nous sommes réparti les tâches équitablement et avons effectué différents points afin de voir l’avancement de chacun. 
+            <br>
+            <br>
+            1 ère étape : La collecte des données. Il y avait 6 stations de pollution contenant chacune environ 5 fichiers. Nous nous sommes partagés les fichiers afin d’être plus efficace.
+            <br>
+            <br>
+            2ème étape : La préparation des données. Cette étape était en partie guidée. En effet, cette partie à était établie sous la supervision du professeur. Les données météo ont pu être regroupées en 1 fichier tandis de celles pour la pollution ont été regroupées en 6 fichiers (1 par station).
+            <br>
+            <br>
+            3ème étape : L’insertion des données dans une base de données primaire. La base de données primaire contenait deux tables : METEO et POLLUTION. Nous avons inséré les données de météo en une seule fois puis les données de pollution ont été ajoutées fichier par fichier en prenant soin de préciser la station. Notre table pollution contenait des informations sur la date de mesure, la station et les mesures de différent polluants.
+            <br>
+            <br>
+            4ème étape : L’entreposage des données. Après observation de nos données, nous avons opté pour un schéma d’entreposage en flocon. Nous l’avons conçu puis avons créé des tables suivant ce schéma et avons inséré les données.
+            <br>
+            <br>
+            5ème étape : L’analyse des données. Nous devions mettre en place un cube de données, malheureusement nous n’avions pas eu le temps d’aborder cette notion en cours. Nous avons donc effectué une simple analyse de données grâce à quelques requêtes SQL. Nous avons aussi fait de la datavisualisation.
+          </p><br>
+          <h2>
+            Apports du projets et objectifs
+          </h2>
+          <p>Durant cette SAE j’ai appris à utiliser de nouvelles librairies sur le langage python. Mais aussi à effectuer des analyses graphiques à partir de requêtes SQL. Afin de m’améliorer, il faut que je m’intéresse plus en profondeur aux différentes fonctions disponibles dans les librairies.</p>
+        </div>
+      </section>
+    </main>
+    <script src="Libraries/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b634c15bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

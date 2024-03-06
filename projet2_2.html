@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet 2ème année 2</title>
+    <style>
+      body {
+          text-align: center; /* Centrer le texte horizontalement */
+          margin: 0; /*Supprimer la marge par défaut du corps */
+          padding: 30px; /*Supprimer le rembourrage par défaut du corps
+          height: 100vh; /* Utiliser 100% de la hauteur de la vue */
+           display: flex; /* Utiliser la disposition flexible */
+          justify-content: center; /* Centrer le contenu horizontalement */
+          box-sizing: border-box;
+          /* align-items: center; Centrer le contenu verticalement */
+      }
+
+      p {
+            max-width: 1200px; /* Définir une largeur maximale pour le texte */
+            margin: 0 auto; /* Centrer le texte horizontalement */
+        }
+  </style>
+    <link rel="stylesheet" href="Libraries/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Css/projet20.css" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <!-- <a href="#" class="nav-logo">Raphaël Bandeira</a> -->
+
+        <!-- <div class="nav-menu" id="nav-menu"> -->
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link"
+                ><i class="fa-solid fa-house nav-icon"></i> Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="index.html#portfolio" class="nav-link"
+                ><i class="fa-solid fa-image nav-icon"></i> Projets</a
+              >
+            </li>
+            <li class="nav-item">
+                <a href="projet2.html" class="nav-link"
+                  ><i class="fa-solid fa-image nav-icon"></i> Projets 2ème année</a
+                >
+              </li>
+          </ul>
+          <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-btns">
+          <!-- theme btn  -->
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div>
+          <h1>Description et prévision de données temporelles</h1><br>
+            <h2>
+              Présentation du projet
+            </h2>
+            <p>
+              L’INSEE met à disposition du grand public la série représentant le nombre de mariages mensuels hétérosexuels enregistrés en France métropolitaine. Ces données enregistrées entre 1946 et 2020 sont disponibles via le lien suivant : 
+              <a href="https://www.insee.fr/fr/statistiques/serie/001721530#Tableau">Lien vers les données</a>
+          </p><br>
+          <p>Ce jeu de données contient en particulier les informations suivantes :
+            <ul>
+                <li>La date</li>
+                <li>Le nombre de mariages</li>
+            </ul>
+            <br>
+            Le but est de réaliser une analyse exploratoire de ces données puis de créer un modèle en vue de prédire le nombre de mariages mensuels sur la période 2021 à 2025. Le travail a été réalisé en 3 étapes : préparation des données, analyse exploratoire et modélisation. Ce projet a été réalisé sur Rstudio.</p><br>
+          <h2>
+            Organisation du travail - Démarche de solution
+          </h2>
+          <p>
+            Ce projet était à faire en groupe. Nous avons réalisé ensemble l’étape de préparation des données. Par la suite, nous avons continué de travailler tous ensemble pour la réalisation des graphiques car il y avait une chronologie. Certains graphiques dépendaient d’autres graphiques ou variables créées en amont. Concernant cette étape, nous devions créer des graphiques attendus (Evolution et tendance du nombre de mariages sur la période d’étude, distributions mensuelles, régression linéaire, etc.) A l’aide des travaux pratiques réalisés en classe, nous avons pu les réalisés sans grande difficulté. Pour finir, nous avons dû produire un rapport en Markdown.
+          </p><br>
+          <h2>
+            Apports du projets et objectifs
+          </h2>
+          <p>Ce projet m’a permis de comprendre l’interprétation des coefficients saisonniers selon le schéma dans lequel on se trouve. J’ai aussi compris qu’il ne fallait pas se limiter aux graphiques demandés mais en faire plus si cela peut aider à approfondir l’étude.</p>
+        </div>
+      </section>
+    </main>
+    <script src="Libraries/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b634c15bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet 3ème année 3</title>
+    <style>
+      body {
+          text-align: center; /* Centrer le texte horizontalement */
+          margin: 0; /*Supprimer la marge par défaut du corps */
+          padding: 30px; /*Supprimer le rembourrage par défaut du corps
+          height: 100vh; /* Utiliser 100% de la hauteur de la vue */
+           display: flex; /* Utiliser la disposition flexible */
+          justify-content: center; /* Centrer le contenu horizontalement */
+          box-sizing: border-box;
+          /* align-items: center; Centrer le contenu verticalement */
+      }
+
+      p {
+            max-width: 1200px; /* Définir une largeur maximale pour le texte */
+            margin: 0 auto; /* Centrer le texte horizontalement */
+        }
+  </style>
+    <link rel="stylesheet" href="Libraries/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Css/projet20.css" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <!-- <a href="#" class="nav-logo">Raphaël Bandeira</a> -->
+
+        <!-- <div class="nav-menu" id="nav-menu"> -->
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link"
+                ><i class="fa-solid fa-house nav-icon"></i> Accueil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="index.html#portfolio" class="nav-link"
+                ><i class="fa-solid fa-image nav-icon"></i> Projets</a
+              >
+            </li>
+            <li class="nav-item">
+                <a href="projet3.html" class="nav-link"
+                  ><i class="fa-solid fa-image nav-icon"></i> Projets 3ème année</a
+                >
+              </li>
+          </ul>
+          <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-btns">
+          <!-- theme btn  -->
+          <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div>
+          <h1>Mise en œuvre d'un processus de Datamining</h1><br>
+            <h2>
+              Présentation du projet
+            </h2>
+            <p>
+              L’objectif de cette SAE était de prédire la catégorie d’une critique (positive ou négative) à partir de son commentaire. En l’occurrence ici, il s’agissait d’entraîner un modèle d’apprentissage afin d’attribuer une catégorie aux textes qui n’en n’avaient pas. Pour cela nous disposions 100 000 critiques de films. Notre jeu de données était décomposé en deux grandes parties : une partie qui est un jeu supervisé et l’autre partie qui est un jeu non supervisé.
+          </p><br>
+          <h2>
+            Organisation du travail - Démarche de solution
+          </h2>
+          <p>
+            Nous étions deux personnes chargées de cette tâche. Nous avons commencé par réfléchir à la meilleure façon d'organiser nos données dans différentes tables, ce qui nous a amenés à concevoir un schéma conceptuel et relationnel. Cette étape était cruciale pour préparer nos données. Nos données étaient stockées dans des fichiers texte que nous avons extraites pour les stocker dans un DataFrame. Nous avons choisi d'utiliser le module Pandas car il offre une structure de données efficace pour manipuler les données. Pour insérer ces données dans nos tables, nous avons utilisé MySQL Connector. Cependant, en raison de problèmes de performances lors de l'insertion d'un grand volume de données, nous avons opté pour l'utilisation de SQLAlchemy pour améliorer la vitesse d'insertion.
+          </p><br>
+          <p>
+            Avant de procéder aux tests d'apprentissage, nous devons déterminer quelles données utiliser. Pour ce faire, nous avons commencé par prélever des échantillons aléatoires de critiques positives et négatives de différentes tailles, allant de 1000 à 25000, afin de les utiliser ultérieurement pour entraîner et tester le modèle. Les modèles sont conçus pour prédire la catégorie de la critique (positive ou négative) en se basant sur des descripteurs et le nombre d'apparitions de ces descripteurs dans la critique. Dans un premier temps, nous avons utilisé la totalité des descripteurs à l'exception des mots vides. Ensuite, nous avons testé la réduction du nombre de descripteurs en ne sélectionnant que ceux présents dans au moins 30 critiques. Ainsi, nous avons travaillé avec des échantillons comprenant différentes critiques, totalisant 86 000 descripteurs au départ, puis, selon la dernière approche, avec seulement 500 descripteurs.
+          </p><br>
+          <p>
+            Pour choisir les modèles d'apprentissage, nous avons opté pour trois options afin de pouvoir les comparer ultérieurement. Nous avons sélectionné le modèle SVM, le modèle Naive Bayes et le modèle KNN.
+          </p><br>
+          <p>
+            Après avoir effectué les tests d'apprentissage, il est apparu que les modèles Naive Bayes et SVM ont des performances comparables pour notre tâche. Nous avons obtenu une précision d'environ 85 % avec ces deux modèles, en utilisant différents échantillons aléatoires.
+          </p><br>
+          <p>
+            En revanche, le modèle KNN s'est révélé moins précis, ne dépassant pas les 60 % de précision pour la prédiction de la catégorie des critiques.
+          </p><br>
+          <h2>
+            Apports du projets et objectifs
+          </h2>
+          <p>Ce projet m’a offert une expérience pratique précieuse dans l'utilisation et la comparaison des modèles d'apprentissage automatique, me permettant ainsi d'acquérir une compréhension approfondie de leurs fonctionnalités et de leurs performances dans des contextes réels.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- <a href="#home" class="scrollup" id="scroll-up">
+      <i class="fa-solid fa-arrow-up scroll-up-icon"></i>
+    </a> -->
+    <script src="Libraries/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9b634c15bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
